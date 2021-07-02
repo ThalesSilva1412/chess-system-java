@@ -6,9 +6,9 @@ import boardgame.Position;
 public class ChessPosition {
 	
 	private char column;
-	private int row;
+	private Integer row;
 	
-	public ChessPosition(char column, int row) {
+	public ChessPosition(char column, Integer row) {
 		if(column < 'a' || column > 'h' || row < 1 || row > 8) {
 			throw new ChessException("Error instantiate ChessPosition: Valids values are from a1 to h8");
 		}
