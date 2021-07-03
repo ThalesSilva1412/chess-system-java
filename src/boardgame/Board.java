@@ -37,6 +37,7 @@ public class Board {
 			throw new BoardException("Position not on the board");
 		}
 		return pieces[position.getRow()][position.getColumn()];
+		
 	}
 	
 	public void placePiece(Piece piece, Position position) {
@@ -61,7 +62,7 @@ public class Board {
 	}
 	
 	private boolean positionExists(Integer row, Integer column) {
-		return row >= 0 && row <= 8 && column >= 0 && column <= 8;
+		return row >= 0 && row < 8 && column >= 0 && column < 8;
 	}
 	
 	public boolean positionExists(Position position) {
